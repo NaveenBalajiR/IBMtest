@@ -1,0 +1,46 @@
+import random
+print("r=Rock")
+print("p=paper")
+print("s=Scissor")
+y=input('enter the either r or p or s: ')
+while y not in ["r","p","s"]:
+   y=input('enter the either r or p or s: ')
+if y=='r':
+  print("You-Rock")
+if y=='p':
+  print("You-Paper")
+if y=='s':
+  print("You-Scissor")
+               
+
+generate=random.randint(0,2)
+generate=str(generate)
+
+if generate=='0':
+   generate='r'
+   print('Computer -Rock')
+if generate=='1':  
+    generate='p'
+    print('Computer-Paper')
+if generate=='2':  
+   generate='s'
+   print('Computer-Scissor')
+x=generate     
+while x==y:
+   print('Tie')
+   break
+if x=='r':
+  if y=='p':
+    print("You win")
+  elif y=='s':
+    print('Computer Win')
+elif x=='p':
+  if y=='r':
+    print("Computer win")
+  elif y=='s':
+    print('You Win')
+elif x=='s':
+  if y=='r':
+    print("You win")
+  elif y=='p':
+    print('Computer Win')    
